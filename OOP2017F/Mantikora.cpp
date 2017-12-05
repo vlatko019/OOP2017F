@@ -1,4 +1,5 @@
 #include "Mantikora.h"
+#include <iomanip>
 
 Mantikora::Mantikora() {
 	this->I = 0;
@@ -6,7 +7,7 @@ Mantikora::Mantikora() {
 	this->O = 0;
 	this->U = 0;
 
-	Creature::Creature("", 0, 0);
+	Creature::Creature(" ", 0, 0);
 }
 
 void Mantikora::PromeniMantikora(char * Ime, double I, double K, double O, double U) {
@@ -27,11 +28,12 @@ Mantikora::~Mantikora() {
 }
 
 std::ostream & operator<<(std::ostream & izlaz, Mantikora & Mantikore) {
-	izlaz << Mantikore.I
-		  << Mantikore.K
-		  << Mantikore.O
-		  << Mantikore.U
-		  << Mantikore.Creature::VratiB()
-		  << Mantikore.Creature::VratiM();
+	izlaz 
+		<< std::setprecision(4) << Mantikore.I << " "
+		<< std::setprecision(4) << Mantikore.K << " "
+		<< std::setprecision(4) << Mantikore.O << " "
+		<< std::setprecision(4) << Mantikore.U << " "
+		<< std::setprecision(4) << Mantikore.Creature::VratiB() << " "
+		<< std::setprecision(4) << Mantikore.Creature::VratiM() << " \n";
 	return izlaz;
 }

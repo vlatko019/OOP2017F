@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="OOP2017F-4.12.2017.txt" />
+    <Text Include="TestPrimer.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Azdaja.h" />

@@ -12,6 +12,6 @@ public:
 	~Creature();
 	inline double VratiB() { return B; };
 	inline double VratiM() { return M; };
-
+	inline char* DajIme() { return Ime; };
 };
 

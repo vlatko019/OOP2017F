@@ -1,4 +1,5 @@
 #include "Azdaja.h"
+#include <iomanip>
 
 Azdaja::Azdaja() {
 	this->S = 0;
@@ -6,7 +7,7 @@ Azdaja::Azdaja() {
 	this->T = 0;
 	this->U = 0;
 
-	Creature::Creature("", 0, 0);
+	Creature::Creature(" ", 0, 0);
 
 }
 
@@ -28,11 +29,13 @@ Azdaja::~Azdaja() {
 }
 
 std::ostream & operator<<(std::ostream & izlaz, Azdaja & Azdaje) {
-	izlaz << Azdaje.S
-		  << Azdaje.K
-		  << Azdaje.T
-		  << Azdaje.U
-		  << Azdaje.Creature::VratiB()
-		  << Azdaje.Creature::VratiM();
+	izlaz
+		//<< Azdaje.Creature::DajIme()
+		<< std::setprecision(4) << Azdaje.S << " "
+		<< std::setprecision(4) << Azdaje.K << " "
+		<< std::setprecision(4) << Azdaje.T << " "
+		<< std::setprecision(4) << Azdaje.U << " "
+		<< std::setprecision(4) << Azdaje.Creature::VratiB() << " "
+		<< std::setprecision(4) << Azdaje.Creature::VratiM() << " \n";
 	return izlaz;
 }

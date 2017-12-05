@@ -35,6 +35,9 @@
     <Text Include="OOP2017F-4.12.2017.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="TestPrimer.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Creature.h">

@@ -6,14 +6,11 @@ Creature::Creature() {
 
 Creature::Creature(char* Ime, double B, double M) {
 	int tmp = 0;
-	do {
-			tmp++;
-	} while (Ime[tmp] != '\0');
 
-	Ime = new char[tmp];
+	this->Ime = new char[30];
 
-	for (int i = 0; i < tmp; i++) {
-		this->Ime[i] = Ime[i];
+	for (int i = 0; i < 30; i++) {
+		this->Ime[i] = *Ime + i;
 	}
 
 	this->B = B;
@@ -23,5 +20,5 @@ Creature::Creature(char* Ime, double B, double M) {
 
 
 Creature::~Creature() {
-	delete[] Ime;
+	
 }
